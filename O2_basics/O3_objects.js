@@ -16,18 +16,23 @@ const JsUser =  {
     lastLoginDays: ["Monday", "Saturday"]
 }
 
-console.log(JsUser.email)
-console.log(JsUser["email"])
+// console.log(JsUser.email)
+// console.log(JsUser["email"])
 
-console.log(JsUser["full name"])
+// console.log(JsUser["full name"])
 
-console.log(typeof JsUser[mySym])
+// console.log(typeof JsUser[mySym])
 
 JsUser.email = "prateek@chatgpt.com"
-Object.freeze(JsUser)
+//Object.freeze(JsUser)
 JsUser.email = "Prateek@chatgptO3.com"
 
-console.log(JsUser["email"])
+// console.log(JsUser["email"])
 
-console.log(JsUser)
+// console.log(JsUser)
 
+JsUser.greeting = function() {
+    console.log(`Hello Prateek, ${this["full name"]}`);  // This executes the log
+}
+
+JsUser.greeting();
