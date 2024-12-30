@@ -19,5 +19,19 @@ function addTwoNumbers(number1, number2){
 //addTwoNumbers(3, null)
 
 const sum = addTwoNumbers(3, 5)
+//console.log("Result: ", sum)
 
-console.log("Result: ", sum)
+function loginUserMessage(username){
+    if(username === undefined){
+        console.log("Please enter a username")
+        return
+    }
+    return `${username} just logged in`
+}
+// function loginUserMessage(username = "user"){
+//     return `${username} just logged in`
+// }
+
+//console.log(loginUserMessage("Prateek"))
+console.log(loginUserMessage())
+
