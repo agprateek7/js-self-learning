@@ -12,3 +12,4 @@
 ((name) => {
     console.log(`this name is ${name}`)
 })("Typhon");
+
