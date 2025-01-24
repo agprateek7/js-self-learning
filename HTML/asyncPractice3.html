@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    const randomColor = function(){
+        return Math.floor(Math.random() * 255);
+    }
+
+    const changeColor = function(){
+        document.body.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    }
+
+    let colorInterval;
+    document.querySelector('#start').addEventListener('click', () => {
+        colorInterval = setInterval(changeColor, 1000);
+    })
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(colorInterval);
+        colorInterval = null;
+    })
+</script>
+</html>
